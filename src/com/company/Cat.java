@@ -63,11 +63,17 @@ final class Cat {
         public static int sortByBread(Cat one, Cat two){
              return one.breed.compareTo(two.breed);
         }
-        public static int sortByNameAndAge(Cat one, Cat two){
+        public static int sortByName(Cat one, Cat two){
              return one.name.compareTo(two.name);
         }
         public static int SortByAge(Cat one, Cat two){
-
+            return one.getAge()-two.getAge();
+        }
+        public static boolean removeSilverColorCat(Cat a  ){
+             return a.getColor().equals(Color.SILVER);
+        }
+        public static boolean removerCatNameLengthFife(Cat a  ){
+          return   a.getName().matches(".{5}");
         }
 
         // Ваш код может находится здесь
