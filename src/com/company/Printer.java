@@ -17,5 +17,21 @@ public class Printer {
         printHeader();
         cats.forEach(Printer::printCat);
         System.out.println();
+        cats.sort(Cat::sortByBread);
+        cats.forEach(Printer::printCat);
+        System.out.println();
+        cats.sort(Cat::sortByName);
+        cats.forEach(Printer::printCat);
+        System.out.println();
+        cats.sort(Cat::SortByAge);
+        cats.forEach(Printer::printCat);
+        System.out.println();
+        cats.removeIf(Cat::removeSilverColorCat);
+        cats.forEach(Printer::printCat);
+        System.out.println();
+        cats.removeIf(Cat::removerCatNameLengthFife);
+        cats.forEach(Printer::printCat);
+
     }
+
 }
